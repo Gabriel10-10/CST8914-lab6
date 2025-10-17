@@ -22,6 +22,59 @@
 				width: 30px;
 				fill: #91929a;
 			}
+
+			.stats-table {
+				width: 100%;
+				border-collapse: collapse;
+				font-family: Arial, Helvetica, sans-serif;
+				font-size: 0.95rem;
+				margin-top: 0.5rem;
+			}
+
+				/* caption styling */
+			.stats-table caption {
+				caption-side: top;
+				font-weight: bold;
+				text-align: left;
+				margin-bottom: 0.4rem;
+				color: #111;
+			}
+
+				/* top header row with dark background */
+			.stats-table thead tr:first-child th {
+				background: #333;        /* dark header bar */
+				color: #fff;
+				padding: 0.6rem 0.8rem;
+				font-weight: 700;
+				text-align: center;
+				border: 1px solid #2a2a2a;
+			}
+
+				/* second header row (column headers) */
+			.stats-table thead tr:nth-child(2) th {
+				background: #bfbfbf;     /* mid gray */
+				color: #111;
+				padding: 0.5rem 0.8rem;
+				font-weight: 700;
+				text-align: center;
+				border-top: 2px solid #666;
+				border-left: 1px solid #999;
+				border-right: 1px solid #999;
+			}
+
+			.stats-table thead th[scope="row"], /* if any row-header in thead (rowspan) */
+			.stats-table tbody th[scope="row"] {
+				background: #4a4a4a;    /* dark grey for Year column */
+				color: #fff;
+				font-weight: 800;
+				padding: 0.6rem 0.8rem;
+				text-align: left;
+				border: 1px solid #3a3a3a;
+				width: 8%;
+				vertical-align: middle;
+			}
+
+
 		</style>
 	</head>
 
@@ -91,8 +144,9 @@
       				<p>Hi/Max agents go above and beyond and always strive to be the best they can be. HI/MAX is extremely community focused, and our agents are too!</p>
 
       				<h3>Stats of HI/Max</h3>
-      				<table border="1"> 
-        				<thead>							
+      				<table class="stats-table" summary="Sold properties and average selling price by year and province" border="1"> 
+        				<caption>Stats of HI/Max</caption>
+						<thead>							
           					<tr>
 								<th></th>
             					<th colspan="2">Sold Properties</th>
